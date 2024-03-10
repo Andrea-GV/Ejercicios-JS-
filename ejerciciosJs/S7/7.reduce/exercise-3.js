@@ -13,3 +13,12 @@ const exams = [
     {name: 'Robert Kiyosaki', score: 2},
     {name: 'Keanu Reeves', score: 10}
 ];
+
+const valorInicial = 0;
+const sumaDeNotas = exams.reduce((acumulador, exam) => acumulador + exam.score, valorInicial);
+console.log(sumaDeNotas);
+
+const mediaDeNotas = sumaDeNotas / exams.length; // poner el 10 me parece un poco guarro... funciona con .length?
+console.log(mediaDeNotas)
+
+// YUHUUUUUUU xD

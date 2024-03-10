@@ -14,3 +14,9 @@ const exams = [
     {name: 'Robert Kiyosaki', score: 2},
     {name: 'Keanu Reeves', score: 10}
 ];
+
+// recordatorio: la función 'reduce' recibe 4 argumentos: acumulador(acc) - valor actual(cur) - indice actual(idx) y un array()src. Necesito un if reducido con ? / : para saber si el score es superior a 5 
+
+const valorInicial = 0;
+const sumaNotasAprobadas = exams.reduce((acumulador, exam) => exam.score >= 5 ? acumulador + exam.score: acumulador, valorInicial);
+console.log(sumaNotasAprobadas);
