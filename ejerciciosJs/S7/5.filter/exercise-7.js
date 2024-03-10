@@ -5,6 +5,24 @@ const streamers = [{ name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft' },
     { name: 'Reven', age: 43, gameMorePlayed: 'League of Legends' },
     { name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us' }];
 
-const weirdos = 
-const streamersFiltrados = streamers.filter(streamer => streamer.name.includes('u'));
-console.log(streamersFiltrados)
+
+const input = document.getElementById('input');
+
+input.addEventListener('input', function() {
+    const inputValue = this.value.toLowerCase();
+    const streamersFiltrados = streamers.filter(streamer => streamer.name.toLowerCase().includes(inputValue));
+    console.log(streamersFiltrados);
+});
+
+
+// Esta función no ha funcionado como quería
+// const inputBody = document.getElementById('input');     // coge el id del input
+
+// const weirdos = (event) => {
+//     // console.log(event);
+//     const streamersFiltrados = streamers.filter(streamer => streamer.name.includes(event.target.value.toLowerCase()));
+//     // console.log(streamersFiltrados);
+//     // console.log(weirdos)
+// }
+
+// inputBody.addEventListener('input', weirdos);
